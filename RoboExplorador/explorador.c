@@ -77,7 +77,8 @@ void loop () {
       varredura();
     }
     if ((distancia90 > 15) && (distancia90 > distancia0) && (distancia90 > distancia180)){
-
+      
+      cabeca.write(90);
       digitalWrite(pino1Motor1,50);
       digitalWrite(pino2Motor1,LOW);
 
@@ -89,6 +90,7 @@ void loop () {
     }else if ((distancia0 < 15) && (distancia180 < 15) && (distancia90 < 15)){
       //liga motores para tras 
        Serial.write("re");
+      cabeca.write(90);
       digitalWrite(pino1Motor1,LOW);
       digitalWrite(pino2Motor1,50);
 
@@ -98,21 +100,23 @@ void loop () {
     }else if ((distancia0 > distancia180) && (distancia0 > distancia90) && (distancia0 > 15)){
       //liga motores para esquerda
        Serial.write("to para esquerda");
+       cabeca.write(90);
        digitalWrite(pino1Motor1,50);
-      digitalWrite(pino2Motor1,LOW);
+       digitalWrite(pino2Motor1,LOW);
 
-      digitalWrite(pino1Motor2,LOW);
-      digitalWrite(pino2Motor2,LOW);
-      delay(500);
+       digitalWrite(pino1Motor2,LOW);
+       digitalWrite(pino2Motor2,LOW);
+       delay(500);
     }else if ((distancia180 > distancia0) && (distancia180 > distancia90) && (distancia180 > 15)){
       //Liga motores para direita
        Serial.write("to para direita");
-      digitalWrite(pino1Motor1,LOW);
-      digitalWrite(pino2Motor1,LOW);
+       cabeca.write(90);
+       digitalWrite(pino1Motor1,LOW);
+       digitalWrite(pino2Motor1,LOW);
 
-      digitalWrite(pino1Motor2,50);
-      digitalWrite(pino2Motor2,LOW);
-      delay(500);
+       digitalWrite(pino1Motor2,50);
+       digitalWrite(pino2Motor2,LOW);
+       delay(500);
     }
      
   
