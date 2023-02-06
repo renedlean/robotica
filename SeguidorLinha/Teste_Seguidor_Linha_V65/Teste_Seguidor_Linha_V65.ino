@@ -13,9 +13,9 @@ double output;
 
 // Setpoint e ganhos do PID
 double setpoint=2500;
-double Kp = 0.07;      // 0.1 Bateria Normal //0.09   //0.1    //0.07 bons
+double Kp = 0.08;      // 0.1 Bateria Normal //0.09   //0.1    //0.07 bons
 double Ki = 0.00001;     //0.01 Bateria Normal //0.015   //00  //0.00001
-double Kd = 0.0017;       //0.0  Bateria Normal //00      //5.0 //0.001
+double Kd = 0.001;       //0.0  Bateria Normal //00      //5.0 //0.001
 
 // Limites PID
 
